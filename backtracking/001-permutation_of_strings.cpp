@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void solve(string s, int start, vector<string> &ans){
+void solve(string &s, int start, vector<string> &ans){
     if(start == s.size()-1){
         ans.push_back(s);
         return;

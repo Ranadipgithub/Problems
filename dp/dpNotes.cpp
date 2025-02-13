@@ -45,7 +45,22 @@
 // Output: 0
 
 // 0-1 Knapsack
-// Input: W = 4, profit[] = {1, 2, 3}, weight[] = {4, 5, 1}
+// Input: W = 4, val[] = {1, 2, 3}, weight[] = {4, 5, 1}
 // Here we have to find maxProfit that is we need optimal => 1st condition for dp
 // We have to choose the item either 0 or 1 => 2nd condition for dp
 
+// Recursive Solution
+// For base condition think of smallest valid input for the problem the smallest valid input is n == 0 or weight == 0
+// Now think what will be the ans for this base condition for the problem if the weight is 0 then maxProfit will be 0
+// Therefore the base condition is when 
+// if(n == 0 || w == 0) return 0;
+// for each item if the weight of the item is less than the weight of the bag then we can either take the item or not
+// take it but if the weight of the item is greater than the wright of the bag when we will surely not take it
+
+#include<bits/stdc++.h>
+using namespace std;
+int knapsack(vector<int> weight, vector<int> val, int n, int w){
+    if(n == 0 || w ==0) return 0;
+    if(weight[n-1] > w) return knapsack(weight, val, n-1, w);
+    return max(val[n-1] + knapsack(weight, val, n-1, w-weight[n-1]), knapsack(weight, val, n-1, w));
+}

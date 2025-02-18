@@ -9,7 +9,7 @@
 //// iii. Count of Subset Sum
 //// iv. Minimum Subset Sum Difference
 //// v. Target sum
-//// vi. No of subsests 
+//// vi. No of subsests with given difference 
 // 2. Unbounded knapsack
 // 3. Fibonacci
 // 4. LCS

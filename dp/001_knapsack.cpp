@@ -75,6 +75,8 @@
 // }
 // Return the last element of the matrix
 
+// Knapsack pattern: a array and a max val will be given and there will be choices to select the arr el 
+
 #include<bits/stdc++.h>
 using namespace std;
 

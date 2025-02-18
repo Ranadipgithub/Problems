@@ -64,3 +64,4 @@ int knapsack(vector<int> weight, vector<int> val, int n, int w){
     if(weight[n-1] > w) return knapsack(weight, val, n-1, w);
     return max(val[n-1] + knapsack(weight, val, n-1, w-weight[n-1]), knapsack(weight, val, n-1, w));
 }
+

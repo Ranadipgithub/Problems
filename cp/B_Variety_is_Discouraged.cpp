@@ -1,6 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <unordered_map>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main(){
@@ -43,9 +41,9 @@ int main(){
         }
         
         if (maxLen == 0) {
-            cout << 0 << "\n";
+            cout << 0 << endl;
         } else {
-            cout << start + 1 << " " << end + 1 << "\n";
+            cout << start + 1 << " " << end + 1 << endl;
         }
     }
     return 0;

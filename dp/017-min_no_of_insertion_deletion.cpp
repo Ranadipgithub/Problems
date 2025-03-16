@@ -17,9 +17,10 @@ int main(){
         }
     }
 
-    int ins = dp[n][m];
-    int del = m - ins;
-    cout << ins <<' ' << del << endl;
+    int lcs = dp[n][m];
+    int ins = m - lcs;
+    int del = n - lcs;
+    cout << "Insertions: " << ins << ", Deletions: " << del << endl;
     return 0;
 }
 

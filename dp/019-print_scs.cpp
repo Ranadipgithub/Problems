@@ -3,6 +3,12 @@
 // Example:
 // Input: s1 = "abac", s2 = "cab"
 // Output: "cabac"
+// solution:
+// The idea is to find the shortest common supersequence of the given strings. We can do this by using dynamic programming.
+// the logic is as follows:
+// if the characters of the strings are equal then we will add the character to the result and move to the next character of both the strings.
+// if the characters of the strings are not equal then we will move to the next character of the string which has the maximum length of the longest common subsequence.
+// The code is as follows:
 
 #include<bits/stdc++.h>
 using namespace std;

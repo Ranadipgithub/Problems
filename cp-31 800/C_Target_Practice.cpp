@@ -1,9 +1,9 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-
+ 
 #define N 10
-
+ 
 vector<vector<int>> values = {
     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
     {1, 2, 2, 2, 2, 2, 2, 2, 2, 1},
@@ -16,7 +16,7 @@ vector<vector<int>> values = {
     {1, 2, 2, 2, 2, 2, 2, 2, 2, 1},
     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
 };
-
+ 
 int main() {
     int t;
     cin >> t;

@@ -10,42 +10,30 @@ int main(){
     while(t--){
         int n, k;
         cin >> n >> k;
-        if(n > 1 && k == 0){
+        if(k < n/2){
             cout << -1 << endl;
             continue;
         }
-        if(n == 1 && k == 0){
-            cout << "A" << endl;
-            cout << "B" << endl;
-            continue;
-        }
-        string s1 = "";
-        string s2 = "";
-        int x = n%3;
-        if(x == 0){
-            for(int i = 0; i < n/3; i++){
-                s1 += "ABC";
-            }
-        } else if(x == 1){
-            for(int i = 0;i<n/3;i++){
-                s1 += "ABC";
-            }
-            s1 += "A";
-        } else if(x == 2){
-            for(int i = 0;i<n/3;i++){
-                s1 += "ABC";
-            }
-            s1 += "AB";
-        }
         for(int i = 0;i<n;i++){
-            s2 += 'A';
+            if(i%2 == 0){
+                cout << "A";
+            } else{
+                cout << "B";
+            }
         }
-        int idx = 0;
-        for(int i = n-k;i<n;i++){
-            s2[i] = s1[idx++];
+        cout << endl;
+        int cnt = k - n/2;
+        for(int i = 0;i<n;i++){
+            if(i%2 == 1){
+                cout << "B";
+            }else if(cnt){
+                cnt--;
+                cout << "A";
+            } else{
+                cout << "C";
+            }
         }
-        cout << s1 << endl;
-        cout << s2 << endl;
+        cout << endl;
     }
     return 0;
 }
